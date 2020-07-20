@@ -4,7 +4,7 @@
 </p>
 
 
-# factuWeb
+# [Factuweb](https://github.com/javiquero/factuweb "Factuweb")
 
 Con este proyecto tendremos una web completa a partir de la información de nuestro [Factusol](https://www.sdelsol.com/programa-facturacion-factusol/ "Factusol"). Los clientes pueden consultar nuestro catálogo, hacer pedidos, consultar todo su historico de pedidos y facturas y contactar con nosotros a través de un formulario.
 
@@ -13,8 +13,16 @@ FactuWeb consta de 3 partes. El frontend programado en Svelte, un backend, en es
 <br>
 
 #### Frontend _(https://github.com/javiquero/factuweb-backend)_
-Programado en Svelte + sapper.
 
+|            Login             |           Catálogo            |            Detalles producto            |            Cesta de la compra            |
+| :---------------------------------: | :----------------------------------: | :----------------------------------: | :----------------------------------: |
+| ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img1.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img2.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img3.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img4.jpg) |
+
+|            Contacto comercial             |           Detalles de pedidos            |            Histórico de pedidos            |            Página de bienvenida            |
+| :---------------------------------: | :----------------------------------: | :----------------------------------: | :----------------------------------: |
+| ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img5.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img6.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img7.jpg) | ![screenshot](https://raw.githubusercontent.com/javiquero/factuweb/master/images/img8.jpg) |
+<br>
+Programado en Svelte + sapper.
 <p align="center">
   <img width="200" src="https://svelte.dev/svelte-logo-horizontal.svg">
   <img width="200" src="https://sapper.svelte.dev/sapper-logo-horizontal.svg">
@@ -45,7 +53,7 @@ Mas información sobre sails: https://github.com/balderdashy/sails/
 Es una pequeña aplicación programada en C# que se encarga de alimentar nuestra api. Pasa la información de nuestra instalación de Factusol a la api.
 
 <p align="center">
-  <img width="100" src="https://raw.githubusercontent.com/javiquero/factuweb/master/images/FactuWebUpdater.png">
+  <img width="300" src="https://raw.githubusercontent.com/javiquero/factuweb/master/images/img10.jpg">
 </p>
 
 
@@ -69,8 +77,7 @@ _(https://github.com/javiquero/factuweb)_
 <br>
 
 ### Estado del proyecto
-Login funciona
-Actualmente toda la web funciona perfectamente excepto las busquedas y el traspaso del carro al pedido.
+Actualmente toda la web funciona perfectamente excepto las busquedas de productos y el checkout(traspaso del carro al pedido).
 <br>
 
 ## Factusol
