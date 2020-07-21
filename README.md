@@ -6,13 +6,13 @@
 
 # [Factuweb](https://github.com/javiquero/factuweb "Factuweb")
 
-Con este proyecto tendremos una web completa a partir de la información de nuestro [Factusol](https://www.sdelsol.com/programa-facturacion-factusol/ "Factusol"). Los clientes pueden consultar nuestro catálogo, hacer pedidos, consultar todo su historico de pedidos y facturas y contactar con nosotros a través de un formulario.
+Con este proyecto tendremos una web completa a partir de la información de nuestro [Factusol](https://www.sdelsol.com/programa-facturacion-factusol/ "Factusol"). Los clientes pueden consultar nuestro catálogo, hacer pedidos, consultar todo su historico de pedidos, facturas y contactar con nosotros a través de un formulario.
 
 ## Proyecto
 FactuWeb consta de 3 partes. El frontend programado en Svelte, un backend, en este caso he seleccionado Salils/js por su simplicidad a la hora de generar una api y por el uso del ORM Waterline que nos va a permitir usar la base de datos que queramos (mysql, mongodb, postgresql) y una aplicación programada en c# que será la encargada de mantener nuestra api actualizada con la información de nuestra instalación de factusol.
 <br>
 
-#### Frontend _(https://github.com/javiquero/factuweb-backend)_
+#### Frontend _(https://github.com/javiquero/factuweb-frontend)_
 
 |            Login             |           Catálogo            |            Detalles producto            |            Cesta de la compra            |
 | :---------------------------------: | :----------------------------------: | :----------------------------------: | :----------------------------------: |
@@ -59,7 +59,14 @@ Es una pequeña aplicación programada en C# que se encarga de alimentar nuestra
 
 
 ### Instalación y puesta en marcha
-Por el momento tienes que clonar los repositorios y descargar las dependencias.
+Puedes lanzar todo el proyecto de forma automática a través del repositorio [Factuweb](https://github.com/javiquero/factuweb "Factuweb")
+```
+git-clone https://github.com/javiquero/factuweb.git
+cd factuweb
+docker-composer up
+```
+
+o puedes ejecutar el backend y el frontend por separado.
 ```
 git-clone https://github.com/javiquero/factuweb-backend.git
 cd factuweb-backend

@@ -1,0 +1,45 @@
+version: '3'
+services:
+    backend:
+        build: 
+            context: .
+            dockerfile: Backend-Dockerfile
+        depends_on:
+            - mysql
+        volumes:
+            - ./.tmp/back:/tmp:rw
+        ports:
+            - "1337:1337"
+        networks:
+            - net
+        links:
+            - mysql
+    frontend:
+        build:
+            context: .
+            dockerfile: Frontend-Dockerfile
+        depends_on:
+            - backend
+        volumes:
+            - ./.tmp/front:/tmp:rw
+        ports:
+            - "5000:5000"
+        networks:
+            - net
+        links:
+            - backend
+    mysql:
+        image: mysql
+        volumes:
+            - ./.tmp/db:/tmp:rw
+        ports:
+            - "3306:3306"
+        networks:
+            - net
+        environment:
+            MYSQL_USER: factuweb
+            MYSQL_ROOT_PASSWORD: guhsdlfjghwoieu8rGSDFH
+            MYSQL_DATABASE: factuweb
+networks:
+    net:
+        driver: bridge
