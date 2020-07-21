@@ -61,31 +61,37 @@ Es una pequeña aplicación programada en C# que se encarga de alimentar nuestra
 ### Instalación y puesta en marcha
 Puedes lanzar todo el proyecto de forma automática a través del repositorio [Factuweb](https://github.com/javiquero/factuweb "Factuweb")
 ```
-git-clone https://github.com/javiquero/factuweb.git
+git clone https://github.com/javiquero/factuweb.git
 cd factuweb
 docker-composer up
 ```
 
 o puedes ejecutar el backend y el frontend por separado.
 ```
-git-clone https://github.com/javiquero/factuweb-backend.git
+git clone https://github.com/javiquero/factuweb-backend.git
 cd factuweb-backend
 npm install
 sails lift &
 cd ..
-git-clone https://github.com/javiquero/factuweb-frontend.git
+git clone https://github.com/javiquero/factuweb-frontend.git
 cd factuweb-frontend
 npm install
 npm run dev
 ```
 
-> Próximamente estará disponible el proyecto dockerizado desde donde se lanzará todo de forma automática.
-_(https://github.com/javiquero/factuweb)_
-<br>
-
 ### Estado del proyecto
-Actualmente toda la web funciona perfectamente excepto las busquedas de productos y el checkout(traspaso del carro al pedido).
-<br>
+
+|            frontEnd             |           backEnd            |            Updater            | 
+| :--------------------------------- | :---------------------------------- | :---------------------------------- |
+| :heavy_check_mark: Login | :heavy_check_mark: Modelos | :heavy_check_mark: Api Conector | 
+| :heavy_check_mark: Catálogo | :heavy_check_mark: conector Db | :heavy_check_mark: Update incremental | 
+| :heavy_check_mark: Detalle de producto | :construction: Controladores | :heavy_check_mark: Update total | 
+| :heavy_check_mark: Historial de pedidos |  | :x: Scheduled update | 
+| :heavy_check_mark: Historial de facturas |  |  | 
+| :heavy_check_mark: Carro | 
+| :heavy_check_mark: Contacto | 
+| :x: Busqueda de productos | 
+| :x: Checkout |
 
 ## Factusol
 FACTUSOL es un programa de facturación gratuito que sirve tanto para gestionar la facturación de tu empresa y llevar el control de stock como para gestionar una facturación de servicios. Se adapta fácilmente a las necesidades de los usuarios y ofrece la información de modo visual y atractivo.
@@ -94,4 +100,7 @@ Es un software de facturación muy completo que puede cubrir cualquier necesidad
 
 Puedes descargarlo gratuitamente desde [aquí](https://www.sdelsol.com/programa-facturacion-factusol/ "aquí").
 
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)  Copyright © 2020-present, Javier Quero
 
