@@ -56,7 +56,7 @@ Es una pequeña aplicación programada en C# que se encarga de alimentar nuestra
   <img width="300" src="https://raw.githubusercontent.com/javiquero/factuweb/master/images/img10.jpg">
 </p>
 
-
+---
 
 ### Instalación y puesta en marcha
 Puedes lanzar todo el proyecto de forma automática a través del repositorio [Factuweb](https://github.com/javiquero/factuweb "Factuweb")
@@ -92,6 +92,8 @@ npm run dev
 | :heavy_check_mark: Contacto | 
 | :x: Busqueda de productos | 
 | :x: Checkout |
+
+---
 
 ## Factusol
 FACTUSOL es un programa de facturación gratuito que sirve tanto para gestionar la facturación de tu empresa y llevar el control de stock como para gestionar una facturación de servicios. Se adapta fácilmente a las necesidades de los usuarios y ofrece la información de modo visual y atractivo.
