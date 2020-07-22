@@ -2,23 +2,18 @@
 # Dockerfile para configurar aplicación factuweb
 ############################################################
 
-# Establece la imagen base
 FROM node:10
 
-# Información de Metadata
 LABEL "cl.apgca.appNode"="JQuero"
 LABEL maintainer="javiquero@gmail.com"
 LABEL version="1.0"
 
-#RUN npm install -g sails grunt npm-check-updates
-
-# Crear directorio de trabajo
 RUN apt-get update && apt-get -y upgrade 
 RUN apt-get install -y git
 
 RUN mkdir -p /app
 USER root
-# Se estable el directorio de trabajo
+
 WORKDIR /app
 
 RUN git clone https://github.com/javiquero/factuweb-backend.git
@@ -27,16 +22,9 @@ WORKDIR /app/factuweb-backend
 
 RUN npm install && npm audit fix --force && npm cache clean --force && npm install grunt-cli -g  && npm install sails -g
 
-# Instalación de Nodemon en forma Global
-# Al realizarse cambios reiniciar el servidor
-RUN npm install nodemon -g --quiet
-
-# Expone la aplicación en el puerto 80
 EXPOSE 1337
 
-# Inicia la aplicación al iniciar al contenedor
+# RUN npm install nodemon -g --quiet
 #CMD nodemon -w api -w config
-# CMD ["node", "./app.js"]
-#CMD ["npm","start"]
-#CMD backend/nodemon -w api -w config
+
 CMD sails lift
