@@ -1,17 +1,33 @@
-version: '3.1'
+version: '3.5'
 services:
+    mysql:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+            - "3306:3306"
+            - "33060:33060"
+        networks:
+            net:
+                aliases: 
+                    - factudb
+        environment:
+            MYSQL_ROOT_PASSWORD: guhsdlfjghwoieu8rGSDFH
+            MYSQL_DATABASE: factuweb
     backend:
         build: 
             context: .
             dockerfile: Backend-Dockerfile
         depends_on:
             - mysql
-        volumes:
-            - ./.tmp/back:/tmp:rw
-        ports:
-            - "1337:1337"
+        # volumes:
+        #     - ./.tmp/back:/tmp:rw
+        # ports:
+        #     - "1337:1337"
         networks:
-            - net
+            net:
+                aliases: 
+                    - factuapi
         links:
             - mysql
     frontend:
@@ -21,25 +37,16 @@ services:
         depends_on:
             - backend
         volumes:
-            - ./.tmp/front:/tmp:rw
+            - ./frontend:/app/factuweb_frontend:rw
         ports:
             - "5000:5000"
         networks:
-            - net
+            net:
+                aliases: 
+                    - factuweb
         links:
             - backend
-    mysql:
-        image: mysql
-        command: --default-authentication-plugin=mysql_native_password
-        restart: always
-        ports:
-            - "3306:3306"
-            - "33060:33060"
-        networks:
-            - net
-        environment:
-            MYSQL_ROOT_PASSWORD: guhsdlfjghwoieu8rGSDFH
-            MYSQL_DATABASE: factuweb
 networks:
     net:
+        name: factuweb_net
         driver: bridge
