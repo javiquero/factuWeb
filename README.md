@@ -86,11 +86,11 @@ npm run dev
 | :heavy_check_mark: Login | :heavy_check_mark: Modelos | :heavy_check_mark: Api Conector | 
 | :heavy_check_mark: Catálogo | :heavy_check_mark: conector Db | :heavy_check_mark: Update incremental | 
 | :heavy_check_mark: Detalle de producto | :construction: Controladores | :heavy_check_mark: Update total | 
-| :heavy_check_mark: Historial de pedidos |  | :x: Scheduled update | 
-| :heavy_check_mark: Historial de facturas |  |  | 
+| :heavy_check_mark: Historial de pedidos |  | :heavy_check_mark: Update imagenes | 
+| :heavy_check_mark: Historial de facturas |  | :x: Scheduled update | 
 | :heavy_check_mark: Carro | 
 | :heavy_check_mark: Contacto | 
-| :x: Busqueda de productos | 
+| :heavy_check_mark: Busqueda de productos | 
 | :x: Checkout |
 
 ---
